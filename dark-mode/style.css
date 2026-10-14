@@ -1,0 +1,31 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+body, #btn{
+    transition: all 0.3s ease;
+}
+body.dark{
+    background-color: #121212;
+    color: #eee;
+}
+body.dark #btn{
+    background-color: #ffffff;
+    color: #000000;
+}
+body.light{
+    background-color: #fff;
+    color: #1a1a1a;
+}
+body.light #btn{
+    background-color: #121212;
+    color: #ffffff;
+}
