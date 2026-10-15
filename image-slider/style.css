@@ -1,0 +1,61 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f9;
+    font-family: sans-serif;
+}
+
+.slider {
+    position: relative; 
+    background: #ffffff;
+    padding: 3rem 6rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: inline-block;       /* Forces the card wrapper to wrap tightly around the picture size */
+}
+
+#sliderImage {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;               /* Prevents tiny default gaps below images */
+}
+
+#btn {
+    display: contents;            /* Tells browser to let buttons ignore this wrapper div */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);       /* Centers the button perfectly level with the image center line */
+    z-index: 10;                      /* Keeps buttons layered smoothly above images */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #dcdcdc;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;                   /* Force a square constraint so circle properties don't distort */
+}
+
+#prevBtn {
+    left: 3.2rem;
+}
+
+#nextBtn {
+    right: 3.2rem;
+}
+
+button:hover {
+    background-color: #5f656dd3;
+    color: white;
+    border-color: #4e535ad3;
+}
