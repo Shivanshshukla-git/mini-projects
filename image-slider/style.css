@@ -15,14 +15,42 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     display: inline-block;       /* Forces the card wrapper to wrap tightly around the picture size */
+
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
 }
 
-#sliderImage {
+.slider:focus {
+    outline: none;                  /* Removes the ugly blue line */
+    border-color: #28a745;
+    box-shadow: 0 6px 24px rgba(40, 167, 69, 0.15);
+}
+
+.image-div{
+    position: relative;
     width: 500px;
     height: 300px;
-    object-fit: cover;
     border-radius: 8px;
-    display: block;               /* Prevents tiny default gaps below images */
+    overflow: hidden;
+}
+
+#bgImage, #sliderImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sliderImage{
+    z-index: 2;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+#bgImage{
+    z-index: 1;
 }
 
 #btn {
