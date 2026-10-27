@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shivansh Shukla">
+    <meta name="description" content="Profile_Forge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile_Forge mini-Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 📋 THE MAIN USER INPUT FORM CARD -->
+        <div class="form-wrapper">
+            <h2>Add User</h2>
+            <form id="userForm">
+            
+                <div class="input-group">
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="userRole">Role</label>
+                    <input type="text" id="userRole" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="userBio">Bio</label>
+                    <textarea id="userBio" rows="4" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="photoUrl">Photo URL</label>
+                    <input type="url" id="photoUrl" required>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    
+        <!-- JavaScript will dynamically render individual profile cards inside this block -->
+        <div id="profilesContainer" class="cards-display-row"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
